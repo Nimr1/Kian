@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - The Vintage Rack</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <header>
+        <h1>Admin Control Panel</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="store.html">View Store</a>
+            <a href="admin.html" class="active">Admin</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="admin-container">
+            <h2>Manage Products</h2>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+
+                <div class="form-group">
+                    <label for="edit-select">Select Item to Edit (Optional)</label>
+                    <select id="edit-select">
+                        <option value="">-- Add New Item --</option>
+                        <!-- Options will be populated by JS -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-name">Product Name / Heading</label>
+                    <input type="text" id="product-name" placeholder="e.g., Vintage Denim Jacket" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-price">Price</label>
+                    <input type="text" id="product-price" placeholder="e.g., £45.00" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-description">Brief Description</label>
+                    <textarea id="product-description" rows="4" placeholder="e.g., A classic 90s denim jacket..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="product-image">Image Path</label>
+                    <input type="text" id="product-image" placeholder="e.g., images/item1.jpg" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="save-btn">Save Changes</button>
+                    <button type="button" id="delete-btn" class="delete-btn" style="display: none;">Delete Item</button>
+                    <button type="button" id="clear-form-btn">Clear Form</button>
+                </div>
+
+                <p id="feedback-message" class="feedback"></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 The Vintage Rack. Admin Area.</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
