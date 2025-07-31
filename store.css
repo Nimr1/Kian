@@ -117,3 +117,30 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Styling for the new "Add to Cart" button */
+.add-to-cart-btn {
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center; /* Center button within the flex container */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #229954;
+}
+
+/* Styling for the cart link in the nav */
+#cart-link {
+    background-color: #f39c12;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+}
